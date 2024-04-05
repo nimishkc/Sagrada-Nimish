@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script> 
+    <title>El Sagrado Secreto De Gaudí</title>
+</head>
+
+<body>
+    <header>
+        <a href="#main" class="skip">Skip to main content</a>
+        <script src="https://cdn.userway.org/widget.js" data-account="nY3cImFAaN"></script>
+        <nav class="navbar">
+            <div class="logo"><a href="homepage.html" aria-label="Return to Homepage" ><img src="images/ESSDG_Logo.png" alt="Logo" class="logo-img"></a></div>       
+            <button class="menu-toggle" onclick="toggleMenu()" aria-controls="menuContent" aria-expanded="false" aria-label="Toggle menu"></button>
+            <!-- <label for="toggle"></label> -->
+            <div class="menu" id="menuContent">
+                <ul>
+                    <li><a href="homepage.html" aria-label="Link to Homepage" >Home</a></li>
+                    <li><a href="architecture.html" aria-label="Link to Architecture page">Architecture</a></li>
+                    <li><a href="timeline.html" aria-label="Link to Timeline page">Timeline</a></li>
+                    <li><a href="blog.html" aria-label="Link to Blog page">Blog</a></li>
+                    <li><a href="about.html" aria-label="Link to About us page">About Us</a></li>
+                    <li><a href="contact.html" aria-label="Link to Contact page">Contact</a></li>
+                    <li><a href="terms.html" aria-label="Link to Terms and Conditions page">Terms and Conditions</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    
+    
+    <!-- Banner -->
+    <section class="banner_subpages">
+        <img src="images/terms.jpg" alt="Sagrada Familia Barcelona photo">
+        <h1>Terms and Conditions</h1>
+    </section>
+
+
+    <!-- Other sections for about us -->
+    <main id="main">
+        <section class="section1">
+            <wrapper  id="terms">
+                <h2>Terms and Conditions</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi incidunt delectus ipsa iste ullam, eligendi fugiat quasi vel et voluptates eveniet a saepe, mollitia ipsum temporibus architecto aperiam totam unde!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sapiente maiores est assumenda repudiandae? Reprehenderit quis, omnis totam dolores porro debitis exercitationem doloremque cumque ad perferendis ratione, est reiciendis autem.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque itaque illum exercitationem ducimus nulla eum similique distinctio eaque nisi perspiciatis. Consequuntur nulla quaerat autem, harum excepturi rerum velit fuga veritatis?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus odio animi accusamus? Asperiores aliquid cum, reiciendis facilis fuga porro quam possimus veritatis id esse praesentium quidem animi, odit nesciunt consequuntur!
+                </p>
+                <button class="button-dark" onclick="redirectToPage('./contact.html')">Contact us</button>
+            </wrapper>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <h2>Footer</h2>
+        <div class="footer-grid">
+            <div class="text-block-footer" id="block1">
+                <h3>Disclaimer</h3>
+                <p>&copy; 2024 El Sagrado Secreto de Gaudí. This website was made with love and passion.</p>
+            </div>
+            <div class="text-block-footer" id="block2">
+                <h3>Our pages</h3>
+                <ul>
+                    <li><a href="homepage.html" aria-label="Link to Homepage">Home<span></span></a></li>
+                    <li><a href="architecture.html" aria-label="Link to Architecture page">Architecture<span></span></a></li>
+                    <li><a href="timeline.html" aria-label="Link to Timeline page">Timeline<span></span></a></li>
+                    <li><a href="blog.html" aria-label="Link to Blog page">Blog<span></span></a></li>
+                    <li><a href="about.html" aria-label="Link to About us page">About Us<span></span></a></li>
+                    <li><a href="contact.html" aria-label="Link to Contact page">Contact<span></span></a></li>
+                    <li><a href="terms.html" aria-label="Link to Terms and Conditions page">Terms and Conditions<span></span></a></li>
+                </ul>
+            </div>
+            <div class="text-block-footer" id="block3">
+                <h3>Social media</h3>
+                <div class="socialmedia">
+                    <a class="socials" href="https://twitter.com/sagradafamilia/status/1185124497470439426"
+                        target="_blank">
+                        <img src="images/x.png" alt="X Logo with Link to x"></a>
+                    <a class="socials" href="https://www.instagram.com/basilicasagradafamilia/" target="_blank">
+                        <img src="images/ig.png" alt="Instagram Logo with Link to Instagram"></a>
+                    <a class="socials" href="https://www.facebook.com/BasilicadelaSagradaFamilia/" target="_blank">
+                        <img src="images/facebook.png" alt="facebook Logo with Link to facebook"></a>
+                    </div>
+                <div class="button-container">
+                    <button class="button-dark" onclick="redirectToPage('https://giving.sagradafamilia.org/puntual?lang=en')">Donate</button>
+                    <button class="button-dark" onclick="redirectToPage('https://giving.sagradafamilia.org/puntual?lang=en')">Tickets</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="GSAP.js" defer></script>
+    <script src="script.js" defer></script> 
+        <!--Import GSAP 3 CDN. Check under https://cdnjs.com/libraries/gsap-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <!--Import GSAP scroll trigger plug-in-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  
+    <title>El Sagrado Secreto De Gaudí</title>
+</head>
+
+<body>
+    <header>
+        <a href="#main" class="skip">Skip to main content</a>
+        <script src="https://cdn.userway.org/widget.js" data-account="nY3cImFAaN"></script>
+        <nav class="navbar">
+            <div class="logo"><a href="homepage.html" aria-label="Return to Homepage" ><img src="images/ESSDG_Logo.png" alt="Logo" class="logo-img"></a></div>       
+            <button class="menu-toggle" onclick="toggleMenu()" aria-controls="menuContent" aria-expanded="false" aria-label="Toggle menu"></button>
+            <!-- <label for="toggle"></label> -->
+            <div class="menu" id="menuContent">
+                <ul>
+                    <li><a href="homepage.html" aria-label="Link to Homepage" >Home</a></li>
+                    <li><a href="architecture.html" aria-label="Link to Architecture page">Architecture</a></li>
+                    <li><a href="timeline.html" aria-label="Link to Timeline page">Timeline</a></li>
+                    <li><a href="blog.html" aria-label="Link to Blog page">Blog</a></li>
+                    <li><a href="about.html" aria-label="Link to About us page">About Us</a></li>
+                    <li><a href="contact.html" aria-label="Link to Contact page">Contact</a></li>
+                    <li><a href="terms.html" aria-label="Link to Terms and Conditions page">Terms and Conditions</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<main id="main">
+    <!-- Banner -->
+<section class="banner_about" id="banner_about">
+    <div class="headlines">
+        <h1>About Us</h1>
+        <h2>Our Team</h2>
+    </div>
+
+    <!-- Goda -->
+    <div class="team-member" id="person1">
+        <img src="images/Goda.png" alt="Headshot Nimish" class="member-photo">
+        <div class="member-intro">
+            <span>Marketing Manager<br>Content and Research</span>
+            <h3>Goda Vertelkaite</h3>
+        </div>
+        <button expand-btn="overlayGoda" aria-label="Expand team member details" aria-expanded="false" >+</button>
+        <div class="expanded-overlay" id="overlayGoda">
+            <!-- Expanded overlay content -->
+            <div class="expanded-overlay-content">
+                
+                <h3>Goda Vertelkaite</h3>
+                <span>Marketing Manager<br>Content and Research</span>
+                      
+                <p>Education:</p>
+                <ul>
+                
+                    <li>Interactive Digital Media (M.Sc.) at Trinity College Dublin</li>
+                    <li>International Communication and Media (B.Sc.) at Erasmus University Rotterdam</li>
+                    
+                </ul> 
+                <p>Dream job: Narrative Designer</p>   
+            </div>
+        </div>
+    </div>
+    
+    <!-- Augus -->
+    <div class="team-member" id="person2">
+        <img src="images/Augus.jpg" alt="Headshot Augus" class="member-photo">     
+        <div class="member-intro">
+            <span>Project Manager 
+                <br> Full-Stack Web Developer
+            </span>
+            <h3>Augustina Vornehm</h3>
+        </div>
+        <button expand-btn="overlayAugus" aria-label="Expand team member details" aria-expanded="false" >+</button>
+        <div class="expanded-overlay" id="overlayAugus">
+            <!-- Expanded overlay content -->
+            <div class="expanded-overlay-content">
+                
+                <h3>Augustina Vornehm</h3>
+                <span>Project Manager 
+                    <br> Full-Stack Web Developer
+                </span>
+        
+                <p>Education:</p>
+                <ul>
+                
+                    <li>Interactive Digital Media (M.Sc.) at Trinity College Dublin</li>
+                    <li>Business Administration (B.Sc.) at LMU Munich</li>
+                    
+                </ul> 
+                <p>Dream job: Assistive Technology R&D - Human Computer Interaction</p>   
+            </div>
+        </div>
+    </div>
+
+    <!-- Birte -->
+    <div class="team-member" id="person3">
+        <img src="images/Birte.jpg" alt="Headshot Birte" class="member-photo"> 
+        <div class="member-intro">
+            <span>Back-End Manager
+                <br> 3D Model Accessibility
+            </span>
+            <h3>Birte Neubauer</h3>
+        </div>
+        <button expand-btn="overlayBirte" aria-label="Expand team member details" aria-expanded="false" >+</button>
+        <div class="expanded-overlay" id="overlayBirte">
+            <!-- Expanded overlay content -->
+            <div class="expanded-overlay-content">
+                
+                <h3>Birte Neubauer</h3>
+                <span>Back-End Manager
+                    <br> 3D Model Accessibility
+                </span>
+                 
+                <p>Education:</p>
+                <ul>
+                
+                    <li>Interactive Digital Media (M.Sc.) at Trinity College Dublin</li>
+                    <li>Digital Humanities and Social Sciences / Sociology (BA) at FAU Erlangen / Nuremberg</li>
+                    
+                </ul> 
+                <p>Dream job: Interactive Art Curator</p>          
+            </div>
+        </div>
+    </div>
+
+    <!-- Nimish -->
+    <div class="team-member" id="person4">
+        <img src="images/Nimish.jpg" alt="Headshot Marina" class="member-photo"> 
+        <div class="member-intro">
+            <span>Interactive Model Functionality
+                <br> 3D Model Styling
+            </span>
+            <h3>Nimish KC</h3>
+        </div>
+        <button expand-btn="overlayNimish" aria-label="Expand team member details" aria-expanded="false" >+</button>
+        <div class="expanded-overlay" id="overlayNimish">
+            <!-- Expanded overlay content -->
+            <div class="expanded-overlay-content">
+                
+                <h3>Nimish KC</h3>
+                <span>3D Model Functionality and Styling
+                </span>                
+                <p>Education:</p>
+                <ul>
+                
+                    <li>Interactive Digital Media (M.Sc.) at Trinity College Dublin</li>
+                    <li>Journalism and Media Studies (BA) at Griffith College, Dublin</li>
+                    
+                </ul> 
+                <p>Dream job: Software Engineer</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Marina -->
+    <div class="team-member" id="person5">
+        <img src="images/Marina.jpg" alt="Headshot Goda" class="member-photo">
+        <div class="member-intro">
+            <span>Web Accessibility Manager
+            </span>
+            <h3>Xinchen Zhu</h3>
+        </div>
+        <button expand-btn="overlayMarina" aria-label="Expand team member details" aria-expanded="false" >+</button>
+        <div class="expanded-overlay" id="overlayMarina">
+            <!-- Expanded overlay content -->
+            <div class="expanded-overlay-content">
+                
+                <h3>Xinchen Zhu</h3>
+                <span>Web Accessibility Manager
+                </span>
+                
+                <p>Education:</p>
+                <ul>
+                
+                    <li>Interactive Digital Media (M.Sc.) at Trinity College Dublin</li>
+                    <li>Linguistics and Communications (BA) at Shanghai International Studies University</li>
+                    
+                </ul> 
+                <p>Dream job: Technical Consulting</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Other sections for about us -->
+
+    <section class="section1" id="our-vision">
+        <div class="image-text-section">
+
+            <div class="image-wrapper-right" id="vision">
+                <img src="images/vision.png" alt="image representing our vision">
+            </div>
+
+            <div class="text-wrapper-left">
+                <h2>Our Vision</h2>
+                <p>
+                    We seek to provide the users, based on our audience and technical research, with access to engaging and informative content regarding the cathedral’s history and architecture. Our interactive experiences have been designed and developed as a means of containing this content all in one place, in a way that can be viewed from the comfort of any device–whether through a desktop computer or mobile phone. It is an experience that has, until now, yet to have been contained in a single online environment, and we thus believe our website has the potential to present tourists and other users interested in the cathedral with significant value. We further strive to make this entire website experience accessible, having learned the importance of accessibility from our Authoring for Digital Media module, just as much as we have been driven to make it both fascinating and convenient for you and all of our users through the excessive research conducted for the development of this experience.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+
+<section class="section1" id="timeline_project">
+
+    <div class="timeline_project">
+        <h2>Our Project</h2>
+        <div class="container">
+            
+            <svg viewBox="0 0 1302 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!--Group of path and dots-->
+                <g>
+                    <path d="M9 18C13.9706 18 18 13.9706 18 9C18 4.0294 13.9706 0 9 0C4.0294 0 0 4.0294 0 9C0 13.9706 4.0294 18 9 18Z" fill="#D9D9D9"/>
+                    <path d="M330 18C334.971 18 339 13.9706 339 9C339 4.0294 334.971 0 330 0C325.029 0 321 4.0294 321 9C321 13.9706 325.029 18 330 18Z" fill="#D9D9D9"/>
+                    <path d="M651 18C655.971 18 660 13.9706 660 9C660 4.0294 655.971 0 651 0C646.029 0 642 4.0294 642 9C642 13.9706 646.029 18 651 18Z" fill="#D9D9D9"/>
+                    <path d="M972 18C976.971 18 981 13.9706 981 9C981 4.0294 976.971 0 972 0C967.029 0 963 4.0294 963 9C963 13.9706 967.029 18 972 18Z" fill="#D9D9D9"/>
+                    <path d="M1293 18C1297.97 18 1302 13.9706 1302 9C1302 4.0294 1297.97 0 1293 0C1288.03 0 1284 4.0294 1284 9C1284 13.9706 1288.03 18 1293 18Z" fill="#D9D9D9"/>
+                    <path d="M0 11V7H1301V11H0Z" fill="#D9D9D9"/>
+                </g>
+                <!--Masking Group of path and dots-->
+                <mask id="mask0_2_6" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1302" height="18">
+                    <g>
+                    <path d="M9 18C13.9706 18 18 13.9706 18 9C18 4.0294 13.9706 0 9 0C4.0294 0 0 4.0294 0 9C0 13.9706 4.0294 18 9 18Z" fill="#D9D9D9"/>
+                        <path d="M330 18C334.971 18 339 13.9706 339 9C339 4.0294 334.971 0 330 0C325.029 0 321 4.0294 321 9C321 13.9706 325.029 18 330 18Z" fill="#D9D9D9"/>
+                        <path d="M651 18C655.971 18 660 13.9706 660 9C660 4.0294 655.971 0 651 0C646.029 0 642 4.0294 642 9C642 13.9706 646.029 18 651 18Z" fill="#D9D9D9"/>
+                        <path d="M972 18C976.971 18 981 13.9706 981 9C981 4.0294 976.971 0 972 0C967.029 0 963 4.0294 963 9C963 13.9706 967.029 18 972 18Z" fill="#D9D9D9"/>
+                        <path d="M1293 18C1297.97 18 1302 13.9706 1302 9C1302 4.0294 1297.97 0 1293 0C1288.03 0 1284 4.0294 1284 9C1284 13.9706 1288.03 18 1293 18Z" fill="#D9D9D9"/>
+                        <path d="M0 11V7H1301V11H0Z" fill="#D9D9D9"/>
+                    </g>
+                </mask>
+
+                <!--Apply masking-->
+                <g mask="url(#mask0_2_6)">
+                    <rect class="mask" y="-49" height="99" fill="black"/>
+                </g>
+            </svg>
+                
+            
+            <section>
+                <span>Part One</span>
+                <h3>The Concept</h3>
+
+                <div class="col">
+                    <p>With the goal of constructing a building-based website for our shared study program, we decided on the Basílica de la Sagrada Família–a structure still experiencing an ongoing construction of its own. We found this as a unique opportunity and recognized the value in containing its significant history and architecture all in one place online, just in time to honour the cathedral’s timely completion–aiming for 100 years after Gaudí’s death in 1926.</p>
+                    <p>Given our newly solidified concept, we divided the managerial roles based on our personal strengths and interests, and set out to work on this very website, hoping that our final project would further encourage personal contributions towards the final structure of the cathedral and make Gaudí’s vision a complete reality in the real world too.</p>
+                </div>
+            </section>
+            
+            <section>
+                <span class="anim">Part Two</span>
+                <h3 class="anim">The Design</h3>
+
+                <div class="col anim">
+                    <p>The initial idea brought about a need for a comprehensive design, rooted in audience and technical research. We discussed the users of our website in great depth and worked hard towards designing the overall structure of the online environment, including the main architectural view and interactive timeline that would allow our users to experience the Basílica like never before in an online context.</p>
+                    <p>Upon analysing our target audience as a means of producing a user-centric design, we began outlining the main structure through flowcharts and wireframes, even selecting its main colours, ultimately deciding on the look and feel of our website that was ready to be filled in with content that you, our users, would have the joy of experiencing.</p>
+                </div>
+            </section>
+
+            <section>
+                <span class="anim">Part Three</span>
+                <h3 class="anim">The Development</h3>
+
+                <div class="col anim">
+                    <p>With the outline of our website established, we began constructing our HTML, adding CSS, and conducting even more research on the Basílica for selecting only the most engaging and informative content for our website. You may discover this as both a visual and written narrative, allowing you to effectively navigate our website and explore our set of interactive experiences, specially crafted for you in relation to the Basílica.</p>
+                    <p>Our efforts until this point have led to what is now the basis of our website–a place in which our two most beloved experiences developed for you, our users, could thoroughly shine as elegantly as the central towers of the Basílica itself. Making progress with the structure and writing of our content, we were led to the establishing of interactivity throughout our website and the main experiences for our users.</p>
+                </div>
+            </section>
+
+            <section>
+                <span class="anim">Part Four</span>
+                <h3 class="anim">The Interactivity</h3>
+
+                <div class="col anim">
+                    <p>With our main content and structure of our website essentially developed, we needed a means of showcasing our main experiences using interactivity. Our architectural view and interactive timeline required a significant amount of additional groundwork in the form of back-end development, in order to develop the complete experiences you see here today.</p>
+                    <p>As a part of the architectural view, a 3D model of the Basílica has been split into sections and colour-coded, then implemented using Javascript and ReactJS. You can find the current version of the model in the architectural view, where you can rotate and click specific sections to read more about each part of the Basílica. Try it out for yourself!</p>
+                </div>
+            </section>
+
+            <section>
+                <span class="anim">Part Five</span>
+                <h3 class="anim">The Accessibility</h3>
+
+                <div class="col anim">
+                    <p>Our Web Authoring course at IDM emphasises the importance of web accessibility–and for good reason. As students of the program, we are driven to incorporate these matters into our own website. From the main accessibility button that allows you to make adjustments according to your personal needs, down to the modifications panel of the 3D model itself, everything you see on our website has gone through rigorous testing and careful accessibility considerations–including each and every element of the HTML, CSS, and Javascript.</p>
+                    <p>We want to assure you that by using our website, you will not only have an engaging and informative experience, but also a highly accessible and customisable one that is unique to you and your needs, no matter the concerns you may bring. Accessibility has been made a primary concern from the very beginning with our initial concept, and is a guaranteed part of our final website experience.</p>
+                </div>
+            </section>
+        </div>
+        <button class="button-white" onclick="location.href='#banner_about'">^</button>
+    </div>
+        
+</section>
+</main>    
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="text-block-footer" id="block1">
+                <h3>Copyright</h3>
+                <p>&copy; 2024 El Sagrado Secreto de Gaudí. The current year defines the nativity of our website, one designed and developed by us with passion, and fully presented to you, our users, in all of its online glory.</p>
+            </div>
+            <div class="text-block-footer" id="block2">
+                <h3>Our pages</h3>
+                <ul>
+                    <li><a href="homepage.html" aria-label="Link to Homepage">Home<span></span></a></li>
+                    <li><a href="architecture.html" aria-label="Link to Architecture page">Architecture<span></span></a></li>
+                    <li><a href="timeline.html" aria-label="Link to Timeline page">Timeline<span></span></a></li>
+                    <li><a href="blog.html" aria-label="Link to Blog page">Blog<span></span></a></li>
+                    <li><a href="about.html" aria-label="Link to About us page">About Us<span></span></a></li>
+                    <li><a href="contact.html" aria-label="Link to Contact page">Contact<span></span></a></li>
+                    <li><a href="terms.html" aria-label="Link to Terms and Conditions page">Terms and Conditions<span></span></a></li>
+                </ul>
+            </div>
+            <div class="text-block-footer" id="block3">
+                <h3>Social media</h3>
+                <div class="socialmedia">
+                    <a class="socials" href="https://twitter.com/sagradafamilia/status/1185124497470439426"
+                        target="_blank">
+                        <img src="images/x.png" alt="X Logo with Link to x"></a>
+                    <a class="socials" href="https://www.instagram.com/basilicasagradafamilia/" target="_blank">
+                        <img src="images/ig.png" alt="Instagram Logo with Link to Instagram"></a>
+                    <a class="socials" href="https://www.facebook.com/BasilicadelaSagradaFamilia/" target="_blank">
+                        <img src="images/facebook.png" alt="facebook Logo with Link to facebook"></a>
+                    </div>
+                <div class="button-container">
+                    <button class="button-dark" onclick="redirectToPage('https://giving.sagradafamilia.org/puntual?lang=en')">Donate</button>
+                    <button class="button-dark" onclick="redirectToPage('https://giving.sagradafamilia.org/puntual?lang=en')">Tickets</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>-->
+    <script src="script.js" defer></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <title>El Sagrado Secreto De Gaudí</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="homepage.html"><img src="images/ESSDG_Logo.png" alt="Logo" class="logo-img"></a>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <label for="toggle"></label>
+                <div class="menu">
+                    <ul>
+                        <li><a href="homepage.html">Home</a></li>
+                        <li><a href="architecture.html">Architecture</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="terms.html">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- Banner -->
+
+    <section class="banner">
+        <img src="images/architecture.png" alt="Sagrada Familia aquarell image representing architectural view">
+        <h1>Architectural View</h1>
+    </section>
+ 
+    
+    
+
+    
+
+    <!-- Section content -->
+    <section class="section1">
+        
+        <h2>Basílica de la Sagrada Família 3D Model</h2>
+
+        <div class="header-sign">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-sliders2" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M10.5 1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4H1.5a.5.5 0 0 1 0-1H10V1.5a.5.5 0 0 1 .5-.5ZM12 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm-6.5 2A.5.5 0 0 1 6 6v1.5h8.5a.5.5 0 0 1 0 1H6V10a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5ZM1 8a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 1 8Zm9.5 2a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V13H1.5a.5.5 0 0 1 0-1H10v-1.5a.5.5 0 0 1 .5-.5Zm1.5 2.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Z" />
+            </svg>
+            <h3>Options</h3>
+        </div>
+    
+
+                     
+        <div class="tabs">
+
+            <!--model size-->
+
+            <input type="checkbox" id="tabsize" name="tabs">
+            <label for="tabsize">Model Size</label>
+            <div class="tab-content"> 
+                <div class="sign-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrows-angle-expand" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707z" />
+                    </svg>
+                    <h4>Size of model section</h4>
+                </div> 
+                <div class="options-container-box">
+                    <input type="range" class="slider form-range" step="25" id="model-size" name="model-size"
+                        onchange="resizeModel();" min="100" max="1000" value="500">
+                </div>
+            </div>
+        
+            <!--model zoom-->
+
+            <input type="checkbox" id="tabzoom" name="tabs">
+            <label for="tabzoom">Zoom</label>
+            <div class="tab-content">
+                <div class="sign-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-zoom-in" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                        <path
+                            d="M10.344 11.742c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1 6.538 6.538 0 0 1-1.398 1.4z" />
+                        <path fill-rule="evenodd"
+                            d="M6.5 3a.5.5 0 0 1 .5.5V6h2.5a.5.5 0 0 1 0 1H7v2.5a.5.5 0 0 1-1 0V7H3.5a.5.5 0 0 1 0-1H6V3.5a.5.5 0 0 1 .5-.5z" />
+                    </svg>
+                    <h4>Zoom</h4> 
+                </div>
+                
+                <div class="options-container-box">                
+                    <input type="range" class="slider form-range" id="model-zoom" name="model-zoom"
+                        onchange="zoomModel();" min="0" max="200" value="60">
+                </div>
+            </div>
+        
+            <!--controls sensitivity-->
+
+            <input type="checkbox" id="tabsensitivity" name="tabs">
+            <label for="tabsensitivity">Controls sensitivity</label>
+            <div class="tab-content">
+                <div class="sign-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-controller" viewBox="0 0 16 16">
+                    <path
+                        d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1v-1z" />
+                    <path
+                        d="M3.051 3.26a.5.5 0 0 1 .354-.613l1.932-.518a.5.5 0 0 1 .62.39c.655-.079 1.35-.117 2.043-.117.72 0 1.443.041 2.12.126a.5.5 0 0 1 .622-.399l1.932.518a.5.5 0 0 1 .306.729c.14.09.266.19.373.297.408.408.78 1.05 1.095 1.772.32.733.599 1.591.805 2.466.206.875.34 1.78.364 2.606.024.816-.059 1.602-.328 2.21a1.42 1.42 0 0 1-1.445.83c-.636-.067-1.115-.394-1.513-.773-.245-.232-.496-.526-.739-.808-.126-.148-.25-.292-.368-.423-.728-.804-1.597-1.527-3.224-1.527-1.627 0-2.496.723-3.224 1.527-.119.131-.242.275-.368.423-.243.282-.494.575-.739.808-.398.38-.877.706-1.513.773a1.42 1.42 0 0 1-1.445-.83c-.27-.608-.352-1.395-.329-2.21.024-.826.16-1.73.365-2.606.206-.875.486-1.733.805-2.466.315-.722.687-1.364 1.094-1.772a2.34 2.34 0 0 1 .433-.335.504.504 0 0 1-.028-.079zm2.036.412c-.877.185-1.469.443-1.733.708-.276.276-.587.783-.885 1.465a13.748 13.748 0 0 0-.748 2.295 12.351 12.351 0 0 0-.339 2.406c-.022.755.062 1.368.243 1.776a.42.42 0 0 0 .426.24c.327-.034.61-.199.929-.502.212-.202.4-.423.615-.674.133-.156.276-.323.44-.504C4.861 9.969 5.978 9.027 8 9.027s3.139.942 3.965 1.855c.164.181.307.348.44.504.214.251.403.472.615.674.318.303.601.468.929.503a.42.42 0 0 0 .426-.241c.18-.408.265-1.02.243-1.776a12.354 12.354 0 0 0-.339-2.406 13.753 13.753 0 0 0-.748-2.295c-.298-.682-.61-1.19-.885-1.465-.264-.265-.856-.523-1.733-.708-.85-.179-1.877-.27-2.913-.27-1.036 0-2.063.091-2.913.27z" />
+                    </svg>
+                    <h4>Sensitivity of controls</h4> 
+                </div>
+                <div class="options-container-box">                       
+                    <input type="range" class="slider form-range" id="model-orbit-sensitivity"
+                        name="model-orbit-sensitivity" onchange="setOrbitSensitivityForModel();" min="0" max="3"
+                        step="0.01" value="1">
+                </div>
+            </div>
+        
+            <!--auto rotate-->
+
+            <input type="checkbox" id="tabrotate" name="tabs">
+            <label for="tabrotate">Auto rotate</label>
+            <div class="tab-content">
+                <div class="auto-rotation-controls">
+                    <div id="auto-rotation-switch">
+                        <div class="sign-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z" />
+                                <path
+                                    d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z" />
+                            </svg>
+                            <h4>Auto-rotation on/off</h4> 
+                        </div>
+
+                        <div class="options-container-box">
+                            <input class="form-check-input" type="checkbox" id="auto-rotate" name="auto-rotate" value="on"
+                            checked onchange="setAutoRotateModel();">
+                        </div>
+                    </div>
+
+
+                    <div id="auto-rotation-speed">
+                        <div class="sign-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-speedometer2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z" />
+                                </svg>
+                            <h4>speed of auto-rotation</h4> 
+                        </div>
+                            <div class="options-container-box">
+                                <input type="range" class="slider form-range" id="model-rotate-speed" name="model-rotate-speed"
+                                onchange="setRotateSpeedOfModel();" min="100" max="1000" value="100">
+                                              
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        
+            <!--annotations-->
+
+            <input type="checkbox" id="tabdannotations" name="tabs">
+            <label for="tabannotations">Annotations</label>
+            <div class="tab-content">
+                <div class="sign-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-speedometer2" viewBox="0 0 16 16">
+                            <path
+                                d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z" />
+                            <path fill-rule="evenodd"
+                                d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z" />
+                        </svg>
+                    <h4>Annotations on/off<h4> 
+                </div> 
+                <div class="options-container-box">
+                    
+                    <input type="checkbox" class="form-check-input" name="show-annotations" id="show-annotations"
+                        onchange="setShowAnnotations();" checked>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!--Collapser-->
+
+        <!--Key controls table -->
+
+        <div class="header-sign">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                class="bi bi-question-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                <path
+                    d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z" />
+            </svg>
+            <h3>Controls</h3>
+        </div>
+
+        <div class="collapsible-wrapper">
+            <input type="checkbox" id="controls-collapsible-toggle" class="collapsible-toggle">
+            <label for="controls-collapsible-toggle" class="collapsible-label">Show Key Controls</label>
+            <div class="collapsible-content">
+
+            <div class="controls-container">
+                <div id="controls-table" class="table-responsive collapse">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th id="action">Action</th>
+                                <th>Keys</th>
+                                <th>Mouse</th>
+                                <th id="touch">Touch</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Rotate</td>
+                                <td><kbd>&leftarrow;</kbd> <kbd>&rightarrow;</kbd> <kbd>&uparrow;</kbd>
+                                    <kbd>&downarrow;</kbd>
+                                </td>
+                                <td><kbd>Left mouse click</kbd> hold and drag</td>
+                                <td>drag with one finger</td>
+                            </tr>
+                            <tr>
+                                <td>Move</td>
+                                <td><kbd>Shift</kbd> + <kbd>&leftarrow;</kbd> <kbd>&rightarrow;</kbd>
+                                    <kbd>&uparrow;</kbd>
+                                    <kbd>&downarrow;</kbd>
+                                </td>
+                                <td><kbd>Right mouse click</kbd> hold and drag</td>
+                                <td>drag with two fingers</td>
+                            </tr>
+                            <tr>
+                                <td id="zoom">Zoom</td>
+                                <td><kbd>Image &uparrow;</kbd> <kbd>Image &downarrow;</kbd></td>
+                                <td><kbd>scroll wheel</kbd></td>
+                                <td id="drag">drag two fingers apart or together</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+
+
+        <!-- Interactive Model -->
+        <div id="section-model">
+            <div class="container1" id="model-container">
+
+
+                <!--old model viewer setup, pls keep for reference 
+                <model-viewer id="Basílica-de-la-Sagrada-Familía" class="model-box" camera-orbit="180deg 0 60%"
+                min-camera-orbit="-Inf Inf auto" max-camera-orbit="-Inf Inf auto" camera-target="0 0 0" ar
+                ar-modes="webxr scene-viewer quick-look" src="models/sagrada-familia.glb" poster="models/cathedral.webp"
+                reveal="manual" shadow-intensity="1" camera-controls auto-rotate-delay="0"
+                interaction-prompt-style="basic" alt="A 3D model of the Basílica de la Sagrada Familía.">-->
+                <model-viewer id="Basílica-de-la-Sagrada-Familía" class="model-box" camera-orbit="0deg 0 60%"
+                    min-camera-orbit="-Inf Inf auto" max-camera-orbit="-Inf Inf auto" camera-target="0 0 0"
+                    src="models/sagrada-final.glb" camera-controls
+                    tone-mapping="commerce" poster="models/cathedral.webp" shadow-intensity="1.27"
+                    environment-image="legacy" exposure="1.14" reveal="manual" shadow-softness="0.57" camera-controls
+                    auto-rotate-delay="0" alt="A 3D model of the Basílica de la Sagrada Familía.">
+                    <div id="lazy-load-poster" slot="poster"></div>
+                    <button id="button-load" slot="poster" type="button" class="button-dark">Load 3D model</button>
+
+                    <button class="Hotspot" slot="hotspot-1" data-position="-2.6019222978963024m -0.3706023531638649m 0.7337541096154104m" data-normal="-1.509957883172319e-7m 0m 0.9999999999999887m" data-target="2.384867731750965m -0.2011009164701808m -2.853318706883946m" data-orbit="-45deg 90deg 1m" data-zoom="90deg" data-visibility-attribute="visible">
+                        <div class="HotspotAnnotation" data-material="8">The Crypt</div>
+              
+                    </button><button class="Hotspot" slot="hotspot-2" data-position="-0.9107936509236558m 3.4637691211618873m 2.0405598482940106m" data-normal="-0.12154678784466805m 0.6317977777928496m 0.765544215797272m" data-target="-0.8902047013536926m 3.4609200073268465m -0.5408927057880986m" data-orbit="20deg 70deg 4m" data-zoom="30deg" data-visibility-attribute="visible">
+                        <div class="HotspotAnnotation" data-material="3">The Passion Façade</div>
+              
+                    </button><button class="Hotspot" slot="hotspot-3" data-position="3.671971345572472m 3.5476125156929657m 0.029941083714988714m" data-normal="0.9658498661158684m -0.012304191068932071m 0.2588100519804022m" data-target="3.6664163968952845m 3.3558024338023027m 0.0015328804397877m" data-orbit="110deg 60deg 2m" data-zoom="20deg" data-visibility-attribute="visible">
+                        <div class="HotspotAnnotation" data-material="1">The Glory Façade</div>
+              
+                    </button><button class="Hotspot" slot="hotspot-4" data-position="0.05182928788929475m 6.583623015142566m -0.5938796869889325m" data-normal="0.873640369098481m -0.00038506740280200183m -0.48657204729059933m" data-target="0.056400134622043074m 6.82713977749515m -0.3162381191434234m" data-orbit="130deg 60deg 2m" data-zoom="25deg" data-visibility-attribute="visible">
+                        <div class="HotspotAnnotation" data-material="7">Evangelists Towers</div>
+              
+                    </button><button class="Hotspot" slot="hotspot-5" data-position="-0.7443072702736862m 8.95352905157644m -0.19270456701195454m" data-normal="0.6919798156890105m 0.18273361062122154m -0.6984070175967125m" data-target="-0.6594702543741023m 6.827801004307712m -0.9102191368961448m" data-orbit="160deg 60deg 2m" data-zoom="20deg" data-visibility-attribute="visible">
+                        <div class="HotspotAnnotation" data-material="5">Tower of Jesus Christ</div>
+              
+                    </button><button class="Hotspot" slot="hotspot-7" data-position="-0.8959972090174194m 2.8508754453826306m -2.2752973659786m" data-normal="-0.18224042944179616m 0.14456312769525517m -0.9725687266141325m" data-target="-0.9527346135346242m 4.315402459313587m -3.865697564097661m" data-orbit="-150deg 60deg 2m" data-zoom="20deg" data-visibility-attribute="visible">
+                        <div class="HotspotAnnotation" data-material="2">Nativity Façade</div>
+              
+                    </button><button class="Hotspot" slot="hotspot-8" data-position="-2.466814295732697m 6.437277245759178m 0.01624570490471422m" data-normal="-0.9999999999999944m -7.549786814166157e-8m -7.543801927578643e-8m" data-target="-2.6130948838359354m 4.702583848720181m -0.0778849420459537m" data-orbit="-60deg 60deg 2m" data-zoom="20deg" data-visibility-attribute="visible">
+                        <div class="HotspotAnnotation" data-material="6">Virgin Mary Tower</div>
+                    </button>
+
+                </model-viewer>
+
+                <div class="textbox-area">
+
+                    <div class="textbox-buttons">
+                        <button class="forward" id="next" onclick="skipForward()">
+                            <span class="arrow"> &#10095;</span>
+                        </button>
+                    
+                        <button class="back" id="last" onclick="skipBackward()"><span
+                            class="arrow">&#10094;</span>
+                        </button>
+                    </div>
+
+                    <div class="textbox" id="textbox-1">
+                        <img src="images/cryp.jpg" width="325" height="244" alt="The Crypt">
+                        <h4>The Crypt (1882 - 1889)</h4>
+                        <p>Underneath the Basílica and extending <b>10 metres</b> below the ground, lies the cathedral’s very
+                            own Crypt. It is the very first development of the project, even preceding the years that
+                            <b>Antoni Gaudí</b> had joined for its construction.
+                        </p>
+                        <p>
+                            When Gaudí took over, he made multiple adjustments, yet stayed true to the original design.
+                        </p>
+                        <p>
+                            It is now known as Antoni Gaudí's place of rest, having been buried there upon his death in <b>1926</b>.
+                        </p>
+                        <p id="final">Read more about the Crypt <a href="blog.html#blog-selection-architecture">here</a>.</p> 
+                        <button class="close" id="1"><span class="cross">&#10006;</span></button>
+                    </div>
+                    <div class="textbox" id="textbox-2">
+                        <img src="images/pas.jpg" width="325" height="244" alt="Passion Façade">
+                        <h4>The Passion Façade (1954 - 1976)</h4>
+                        <p>In the western direction, lies the stark and extraordinary Passion façade.</p>
+                        <p>Representing both <b>Jesus’ death and resurrection</b>, this angular façade has been said to
+                            resemble a skeleton, in direct contrast to the Nativity façade’s lively organic design.
+                        </p>
+                        <p>The two representations have been divided between a lower and upper narthex and contain
+                            scenes from Jesus’ <b>final days of life</b>. The scenes can be read like a story in an “s” shaped
+                            curve, beginning at the <b>lower left</b> and spanning all the way through the roof of the
+                            structure.</p>
+                        <p>When viewing the façade from left to right, you can observe the 4 bell towers dedicated to
+                            <b>James the lesser, Bartholomew, Thomas, then Philip</b>.
+                        </p>
+                        <p id="final">Read more about the Passion façade <a href="blog.html#blog-selection-architecture">here</a>.</p> 
+                        <button class="close" id="2"><span class="cross">&#10006;</span></button>
+                    </div>
+                    <div class="textbox" id="textbox-3">
+                        <img src="images/glor.jpg" width="325" height="244" alt="Glory Façade">
+                        <h4>The Glory Façade (2002 - today)</h4>
+                        <p>The final façade, known as the Glory façade, is found facing the south. It is the only one of
+                            which still <b>under construction</b> and will act as the main entrance to the Basílica upon its
+                            completion.
+                        </p>
+                        <p>It will represent Jesus’ <b>“eternal glory”</b> and all of humanity, with themes of heaven and hell,
+                            temptation, and of an ultimate “ascension to God”, based on the design ideas left behind by
+                            Antoni Gaudí himself.
+                        </p>
+                        <p>As the <b>tallest</b> of all the façades, it will contain one “great narthex” of 16 lanterns, with
+                            the bottom 7 representing the days of creation.
+                        </p>
+                        <p>The 4 bell towers planned for this façade will represent the 4 remaining apostles: <b>Andrew,
+                                Peter, Paul, and James the Greater</b> (in order from left to right).
+                        </p>
+                        <p id="final">Read more about the Glory façade <a href="blog.html#blog-selection-architecture">here</a>.</p> 
+                        <button class="close" id="3" onclick="closeTextBox()"><span
+                                class="cross">&#10006;</span></button>
+                    </div>
+                    <div class="textbox" id="textbox-4">
+                        <img src="images/mary.jpg" width="325" height="244" alt="Virgin Mary Tower">
+                        <h4>Virgin Mary Central Tower (2016 - 2021)</h4>
+                        <p>Located at the centre north of the Basílica, this central tower has been specially dedicated
+                            to the <b>Virgin Mary</b>.
+                        </p>
+                        <p>It is the second tallest tower of the cathedral, at a height of <b>138 metres</b>, and can be
+                            identified by its magnificent morning star embellishment–one that can be seen shining
+                            luminously at night.
+                        </p>
+                        <p id="final">Read more about the Virgin Mary tower <a href="blog.html#blog-selection-architecture">here</a>.</p>
+                        <button class="close" id="4"><span class="cross">&#10006;</span></button>
+                    </div>
+                    <div class="textbox" id="textbox-5">
+                        <img src="images/jes.jpg" width="325" height="244" alt="Jesus Christ Tower">
+                        <h4>Jesus Christ Central Tower (2016 - today)</h4>
+                        <p>At the centre of it all stands the main central tower, dedicated to <b>Jesus Christ</b>
+                            himself.
+                        </p>
+                        <p>This tower is the tallest of them all, rising up at <b>172.5 metres</b>, and has been
+                            embellished
+                            with a pinnacle of a “four-armed cross”, with added lights radiating in each of the cardinal
+                            directions.
+                        </p>
+                        <p id="final">Read more about the Jesus Christ tower <a href="blog.html#blog-selection-architecture">here</a>.</p>
+                        <button class="close" id="5"><span class="cross">&#10006;</span></button>
+                    </div>
+                    <div class="textbox" id="textbox-6">
+                        <img src="images/ev.jpg" width="325" height="244" alt="Evangelist Towers">
+                        <h4>The Evangelists Towers (2016 - 2023)</h4>
+                        <p>Surrounding the main central tower, these 4 towers all stand at <b>135 metres</b> tall and have been
+                            dedicated to each of the Evangelists: <b>Matthew, Mark, John, and Luke</b>.
+                        </p>
+                        <p>Each tower can be identified by a unique symbolic entity with wings:</p>
+                        <ul>
+                            <li>- Matthew is represented by an angel.</li>
+                            <li>- Mark is represented by a lion.</li>
+                            <li>- John is represented by an eagle.</li>
+                            <li>- Luke is represented by an ox.</li>
+                        </ul>
+                        <p id="final">Read more about the Evangelists towers <a href="blog.html#blog-selection-architecture">here</a>.</p> 
+                        <button class="close" id="6"><span class="cross">&#10006;</span></button>
+                    </div>
+                    <div class="textbox" id="textbox-7">
+                        <img src="images/nat.jpg" width="325" height="244" alt="Nativity Façade">
+                        <h4>The Nativity Façade (1894 - 1930)</h4>
+
+                        <p>On the east facing side lies the original Nativity façade–the <b>first façade</b> ever
+                            constructed for the
+                            Basilica de la Sagrada Família.</p>
+                        <p>In accordance with the chronology of construction, this façade represents the <b>birth and
+                                life
+                                of Jesus</b>
+                            in terms of events, with its many Nativity scenes and various decorative elements
+                            symbolising
+                            nature.</p>
+                        <p>It is divided into <b>3 distinct portals</b>, each representing a different virtue and member
+                            of the
+                            Holy
+                            Family, and contains 4 bell towers representing the apostles <b>Barnabas, Simon, Jude, and
+                                Matthias</b>
+                            (when viewing them from left to right).</p>
+                        <p id="final">It is the only façade whose construction began in Antoni Gaudí’s lifetime. Read more about
+                            the
+                            Nativity façade <a href="blog.html#blog-selection-architecture">here</a>.</p>
+                        
+                        <button class="close" id="7"><span class="cross">&#10006;</span></button>
+
+                    </div>
+                   
+
+                </div>
+
+                
+            </div>
+            <!-- adding the navigation bar and dots here in this container -->
+            <div class="navigation-aid">
+                <svg viewBox="0 0 1302 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 7H1302V11H0V7Z" fill="#D9D9D9" />
+                    <path class="nav-point" id="nav-1"
+                        d="M18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                        fill="#D9D9D9" />
+                    <path class="nav-point" id="nav-2"
+                        d="M232 9C232 13.9706 227.971 18 223 18C218.029 18 214 13.9706 214 9C214 4.02944 218.029 0 223 0C227.971 0 232 4.02944 232 9Z"
+                        fill="#D9D9D9" />
+                    <path class="nav-point" id="nav-3"
+                        d="M447 9C447 13.9706 442.971 18 438 18C433.029 18 429 13.9706 429 9C429 4.02944 433.029 0 438 0C442.971 0 447 4.02944 447 9Z"
+                        fill="#D9D9D9" />
+                    <path class="nav-point" id="nav-4"
+                        d="M660 9C660 13.9706 655.971 18 651 18C646.029 18 642 13.9706 642 9C642 4.02944 646.029 0 651 0C655.971 0 660 4.02944 660 9Z"
+                        fill="#D9D9D9" />
+                    <path class="nav-point" id="nav-5"
+                        d="M873 9C873 13.9706 868.971 18 864 18C859.029 18 855 13.9706 855 9C855 4.02944 859.029 0 864 0C868.971 0 873 4.02944 873 9Z"
+                        fill="#D9D9D9" />
+                    <path class="nav-point" id="nav-6"
+                        d="M1088 9C1088 13.9706 1083.97 18 1079 18C1074.03 18 1070 13.9706 1070 9C1070 4.02944 1074.03 0 1079 0C1083.97 0 1088 4.02944 1088 9Z"
+                        fill="#D9D9D9" />
+                    <path class="nav-point" id="nav-7"
+                        d="M1302 9C1302 13.9706 1297.97 18 1293 18C1288.03 18 1284 13.9706 1284 9C1284 4.02944 1288.03 0 1293 0C1297.97 0 1302 4.02944 1302 9Z"
+                        fill="#D9D9D9" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>Footer</h2>
+        <div class="footer-grid">
+            <div class="text-block-footer" id="block1">
+                <h3>Disclaimer</h3>
+                <p>&copy; 2024 El Sagrado Secreto de Gaudí. This website was made with love and passion.</p>
+            </div>
+            <div class="text-block-footer" id="block2">
+                <h3>Our pages</h3>
+                <ul>
+                    <li><a href="homepage.html">Home<span></span></a></li>
+                    <li><a href="architecture.html">Architecture<span></span></a></li>
+                    <li><a href="timeline.html">Timeline<span></span></a></li>
+                    <li><a href="about.html">About Us<span></span></a></li>
+                    <li><a href="contact.html">Contact<span></span></a></li>
+                    <li><a href="terms.html">Terms and Conditions<span></span></a></li>
+                </ul>
+            </div>
+            <div class="text-block-footer" id="block3">
+                <h3>Social media</h3>
+                <div class="socialmedia">
+                <a class="socials" href="https://twitter.com/sagradafamilia/status/1185124497470439426"
+                    target="_blank">
+                    <img src="images/x.png" alt="X Logo with Link to x"></a>
+                <a class="socials" href="https://www.instagram.com/basilicasagradafamilia/" target="_blank">
+                    <img src="images/ig.png" alt="Instagram Logo with Link to Instagram"></a>
+                <a class="socials" href="https://www.facebook.com/BasilicadelaSagradaFamilia/" target="_blank">
+                    <img src="images/facebook.png" alt="facebook Logo with Link to facebook"></a>
+                </div>
+                <div class="button-container">
+                    <button class="button-dark"
+                        onclick="redirectToPage('https://giving.sagradafamilia.org/puntual?lang=en')">Donate</button>
+                    <button class="button-dark"
+                        onclick="redirectToPage('https://giving.sagradafamilia.org/puntual?lang=en')">Tickets</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="model_options.js" async defer></script>
+</body>
+
+</html>

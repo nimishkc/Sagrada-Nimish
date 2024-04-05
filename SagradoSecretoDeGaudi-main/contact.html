@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script> 
+    <title>El Sagrado Secreto De Gaudí</title>
+</head>
+
+<body>
+    <header>
+        <a href="#main" class="skip">Skip to main content</a>
+        <script src="https://cdn.userway.org/widget.js" data-account="nY3cImFAaN"></script>
+        <nav class="navbar">
+            <div class="logo"><a href="homepage.html" aria-label="Return to Homepage" ><img src="images/ESSDG_Logo.png" alt="Logo" class="logo-img"></a></div>       
+            <button class="menu-toggle" onclick="toggleMenu()" aria-controls="menuContent" aria-expanded="false" aria-label="Toggle menu"></button>
+            <!-- <label for="toggle"></label> -->
+            <div class="menu" id="menuContent">
+                <ul>
+                    <li><a href="homepage.html" aria-label="Link to Homepage" >Home</a></li>
+                    <li><a href="architecture.html" aria-label="Link to Architecture page">Architecture</a></li>
+                    <li><a href="timeline.html" aria-label="Link to Timeline page">Timeline</a></li>
+                    <li><a href="blog.html" aria-label="Link to Blog page">Blog</a></li>
+                    <li><a href="about.html" aria-label="Link to About us page">About Us</a></li>
+                    <li><a href="contact.html" aria-label="Link to Contact page">Contact</a></li>
+                    <li><a href="terms.html" aria-label="Link to Terms and Conditions page">Terms and Conditions</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    
+    
+    <!-- Banner -->
+    <section class="banner_contact">
+        <h1>Contact</h1>
+        <img src="images/contact.jpg" alt="Basilica de la Sagrada Familia Photo">
+    </section>
+
+    
+    <div class="filler"></div>
+    <main id="main">
+        <!-- Section contact homepage -->
+        <section class="section1">
+            <div class="contact-form-text">
+                <h2>Contact us</h2>
+                <p>
+                    Have any questions or something interesting you’d like to say about our website? Send us your feedback!
+                    <br><br>
+                    As a part of a student project, we would love to hear all about your thoughts on our website so we can continue providing you with quality experiences. 
+                    <br><br>
+                    Check out what others are saying about their own experiences on the homepage.
+                </p>
+                <form id="contact-form" action="submit.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <div class="filler"></div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="text-block-footer" id="block1">
+                <h3>Copyright</h3>
+                <p>&copy; 2024 El Sagrado Secreto de Gaudí. The current year defines the nativity of our website, one designed and developed by us with passion, and fully presented to you, our users, in all of its online glory.</p>
+            </div>
+            <div class="text-block-footer" id="block2">
+                <h3>Our pages</h3>
+                <ul>
+                    <li><a href="homepage.html" aria-label="Link to Homepage">Home<span></span></a></li>
+                    <li><a href="architecture.html" aria-label="Link to Architecture page">Architecture<span></span></a></li>
+                    <li><a href="timeline.html" aria-label="Link to Timeline page">Timeline<span></span></a></li>
+                    <li><a href="blog.html" aria-label="Link to Blog page">Blog<span></span></a></li>
+                    <li><a href="about.html" aria-label="Link to About us page">About Us<span></span></a></li>
+                    <li><a href="contact.html" aria-label="Link to Contact page">Contact<span></span></a></li>
+                    <li><a href="terms.html" aria-label="Link to Terms and Conditions page">Terms and Conditions<span></span></a></li>
+                </ul>
+            </div>
+            <div class="text-block-footer" id="block3">
+                <h3>Social media</h3>
+                <div class="socialmedia">
+                    <a class="socials" href="https://twitter.com/sagradafamilia/status/1185124497470439426"
+                        target="_blank">
+                        <img src="images/x.png" alt="X Logo with Link to x"></a>
+                    <a class="socials" href="https://www.instagram.com/basilicasagradafamilia/" target="_blank">
+                        <img src="images/ig.png" alt="Instagram Logo with Link to Instagram"></a>
+                    <a class="socials" href="https://www.facebook.com/BasilicadelaSagradaFamilia/" target="_blank">
+                        <img src="images/facebook.png" alt="facebook Logo with Link to facebook"></a>
+                    </div>
+                <div class="button-container">
+                    <button class="button-dark" onclick="redirectToPage('https://giving.sagradafamilia.org/puntual?lang=en')">Donate</button>
+                    <button class="button-dark" onclick="redirectToPage('https://giving.sagradafamilia.org/puntual?lang=en')">Tickets</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
