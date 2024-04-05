@@ -1,0 +1,11 @@
+    <svg width="30" height="500" viewBox="0 0 18 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="9" y1="0" x2="9" y2="500" stroke="#223581" stroke-width="5" />
+
+            <circle id="nav-1" cx="9" cy="12" r="12" />
+            <circle id="nav-2" cx="9" cy="125" r="12" />
+            <circle id="nav-3" cx="9" cy="200" r="12" />
+            <circle id="nav-4" cx="9" cy="275" r="12" />
+            <circle id="nav-5" cx="9" cy="350" r="12" />
+            <circle id="nav-6" cx="9" cy="425" r="12" />
+            <circle id="nav-7" cx="9" cy="488" r="12" />
+        </svg>
